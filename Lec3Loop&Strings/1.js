@@ -33,3 +33,8 @@ console.log("Congratulations you entered the right Number")
 
 let str1 =`hello ji ${UseNum} ghar aao mehman`;
 console.log(str1);
+
+const st =new String("pawan");
+console.log(st)
+
+
