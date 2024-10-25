@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>To Do List</title>
+    <style>
+        ul li{
+            list-style: none;
+            font-size: 17px;
+            padding: 12px 8px 12px 50px;
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+        }
+        ul li::before {
+            content: '';
+            position: absolute;
+            height: 23px;
+            width: 23px;
+            border-radius: 50%;
+            background-image: url(images/unchecked.png);
+            background-size: cover;
+            background-position: center;
+            top: 17px;
+            left: 18px;
+
+        }
+        ul li.checked{
+            color: #555;
+            text-decoration: line-through;
+        }
+        ul li.checked::before{
+            background-image: url(images/checked.png);
+        }
+        ul li span{
+            position: absolute;
+            top: 5px;
+            right:0;
+            top: 5px;
+            width: 40px;
+            height: 40px;
+            font-size: 22px;
+            color: #555;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+
+        }
+        ui li span:hover{
+            background: #edeef0;
+        }
+    </style>
+</head>
+<body class=" flex justify-center items-center bg-gradient-to-br from-blue-500 via-indigo-500
+ to-purple-400 h-screen  ">
+     <div class=" bg-white w-66 rounded-md h-auto max-w-sm items-center">
+        <div class="flex flex-wrap m-6">
+            <h3 class="text-blue-900 font-extrabold
+            ">To-Do List  </h3>
+            <img class="size-6" src="images/icon.png" alt="">
+        </div>
+        <div class="flex flex-row justify-center  ml-10 
+          mr-14 h-9 rounded-full  bg-gray-300 mb-4 mt" >
+            <input id="input-box" class= "bg-transparent rounded-full p-[10px] 
+            pr-8  flex-1 border-none  outline-none" 
+            type="text" placeholder="Add Your Text">
+            <button  class="bg-orange-600 w-28 rounded-full p-[16px 15px]
+            cursor-pointer font-sans " onclick="addTask()">ADD</button>
+        </div>
+        <ul id="list-container" >
+            <!-- <li class="checked">Task1</li>
+            <li class= "checked">Task2</li>
+            <li class= "checked">Task3</li> -->
+        </ul>
+        
+        
+     </div>
+     <script src="index.js"></script>
+</body>
+</html>
