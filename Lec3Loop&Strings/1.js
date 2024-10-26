@@ -37,4 +37,4 @@ console.log(str1);
 const st =new String("pawan");
 console.log(st)
 
-
+console.log(Math)
