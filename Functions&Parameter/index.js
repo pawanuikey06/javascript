@@ -23,3 +23,45 @@ handleObject({
 
 // Passing Array Inside the Function
 
+{
+   const a =324
+   
+console.log(a)
+
+}
+
+// This KeyWord
+
+const user1 ={
+    username :"pawan",
+    price: 3231,
+     welcomeMessage :function (){
+        console.log(`${this.username}, Welcome to Website`)
+        console.log(this)
+     }
+}
+
+user1.welcomeMessage()
+user1.username ='Sammy'
+user1.welcomeMessage()
+console.log(this)
+
+function chai(){
+    let username ='pawan'
+    console.log(this.username)
+}
+chai()
+console.log(this)
+
+const chai1=function(){
+    let username ='pawan'
+    console.log(this.username)
+}
+chai1()
+
+const chai2 =()=>{
+     let user ='hitesh'
+     console.log(this.user)
+}
+chai2()
+
