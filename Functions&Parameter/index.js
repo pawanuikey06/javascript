@@ -65,3 +65,13 @@ const chai2 =()=>{
 }
 chai2()
 
+
+// Arrow Function
+
+const addTwo =(num1,num2)=>(num1 +num2)
+
+console.log(addTwo(2,3))
+const addTwo1 =(num1,num2)=>{
+    return num1+num2
+}
+console.log(addTwo1(21,3))
