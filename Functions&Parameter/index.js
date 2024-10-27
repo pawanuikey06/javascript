@@ -75,3 +75,15 @@ const addTwo1 =(num1,num2)=>{
     return num1+num2
 }
 console.log(addTwo1(21,3))
+
+
+// Immediately Invoked Function Expression (IIFE)
+
+
+(function chai5() {
+    console.log("Daaba");
+})();
+
+(()=>{
+    console.log("asdmad")
+})();
