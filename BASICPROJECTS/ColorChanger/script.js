@@ -10,17 +10,20 @@ buttons.forEach((button)=>{
         const color =event.target.id;
         switch(color){
             case "grey":
-                document.body.style.backgroundColor = "grey";
+                document.body.style.backgroundColor = color;
                 break;
             case "white":
-                document.body.style.backgroundColor = "white";
+                document.body.style.backgroundColor = color;
                 break;
             case "Blue":
-                document.body.style.backgroundColor = "blue";
+                document.body.style.backgroundColor = color;
                 break;
             case "Crimson":
-                document.body.style.backgroundColor = "crimson";
+                document.body.style.backgroundColor =color;
                 break;
+            case "purple":
+                    document.body.style.backgroundColor =color;
+                    break;    
             default:
                 console.log("Color not found");
         }
