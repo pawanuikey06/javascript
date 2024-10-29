@@ -1,0 +1,63 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    background-size: 200% 200%;
+    animation: gradientBackground 15s ease infinite;
+}
+
+/* Background gradient animation */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Clock container */
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+/* Time display */
+#time {
+    font-size: 4rem;
+    color: #0fffc3;
+    text-shadow: 0 0 10px rgba(15, 255, 195, 0.8), 0 0 30px rgba(15, 255, 195, 0.6), 0 0 50px rgba(15, 255, 195, 0.4);
+    letter-spacing: 3px;
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+    transition: transform 0.2s ease;
+}
+
+#time:hover {
+    transform: scale(1.1);
+}
+
+/* Pulsing container animation */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Neon glow effect */
+@keyframes neonGlow {
+    from { text-shadow: 0 0 10px rgba(15, 255, 195, 0.8), 0 0 30px rgba(15, 255, 195, 0.6), 0 0 50px rgba(15, 255, 195, 0.4); }
+    to { text-shadow: 0 0 20px rgba(15, 255, 195, 1), 0 0 40px rgba(15, 255, 195, 0.8), 0 0 60px rgba(15, 255, 195, 0.6); }
+}
