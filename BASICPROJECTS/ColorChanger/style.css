@@ -1,0 +1,81 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Main container styling */
+.main {
+    text-align: center;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Color box container */
+.Box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Color circles */
+.colors {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.colors:hover {
+    transform: scale(1.1);
+}
+
+/* Color IDs */
+#grey {
+    background-color: grey;
+}
+
+#white {
+    background-color: white;
+    border: 1px solid #ccc; /* Add border for visibility */
+}
+
+#Blue {
+    background-color: blue;
+}
+
+#Crimson {
+    background-color: crimson;
+}
+
+/* Responsive adjustments */
+@media (min-width: 480px) {
+    .Box {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
