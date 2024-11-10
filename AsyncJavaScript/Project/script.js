@@ -1,19 +1,16 @@
 let colorInterval;
-
-// Array of colors to switch between
-const colors = ['#FF6347', '#1E90FF', '#32CD32', '#FFD700', '#8A2BE2', '#FF4500'];
-
-const getRandomColor = () => {
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    return colors[randomIndex];
+// Function to generate a random hex color code
+const generateRandomHexColor = () => {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
-
 document.querySelector('#start').addEventListener('click', () => {
-    colorInterval = setInterval(() => {
-        document.body.style.backgroundColor = getRandomColor();
-    }, 2000);
+    if(!colorInterval){
+        colorInterval = setInterval(() => {
+            document.body.style.backgroundColor = generateRandomHexColor();
+        }, 2000);
+    }  
 });
-
 document.querySelector('#stop').addEventListener('click', () => {
     clearInterval(colorInterval); // Stop the color change
+    colorInterval=null;
 });

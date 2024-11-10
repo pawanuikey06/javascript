@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Key Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+        }
+        .output {
+            font-size: 24px;
+            margin: 20px;
+        }
+        .info {
+            font-size: 18px;
+            color: #555;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Press Any Key</h1>
+    <div class="output">
+        <p id="keyName">Key: </p>
+        <p id="keyCode">Key Code: </p>
+    </div>
+
+    <button id="clear">Clear</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
