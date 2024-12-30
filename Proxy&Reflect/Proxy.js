@@ -31,6 +31,7 @@ const p1Proxy = new Proxy(p1, {
                     }
                     break;
             }
+            
             target[property] = value; // Set the value if all checks pass
             return true; // Indicate successful assignment
         } else {
@@ -54,3 +55,6 @@ try {
 } catch (error) {
     console.error(error.message);
 }
+
+
+console.log(p1)
