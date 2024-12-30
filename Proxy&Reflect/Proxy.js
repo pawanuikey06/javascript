@@ -44,7 +44,7 @@ try {
     p1Proxy.age = 1; // Valid assignment
     console.log(p1Proxy.age); // Should log: 3
 
-    p1Proxy.fname = "John"; // Valid assignment
+    p1Proxy.fname = 'jai ho'; // Valid assignment
     console.log(p1Proxy.fname); // Should log: "John"
 
     // Uncomment these to test the errors:
