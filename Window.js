@@ -1,10 +1,13 @@
-console.log('hello')
-console.log(globalThis === globalThis.globalThis);
-// console.log(self === self.self);
+function add(a) {
+    return function (b) {
+        if (b !== undefined) {
+            return add(a + b); // Return a new function to continue currying
+        } else {
+            return a; // Return the result when no argument is passed
+        }
+    };
+}
 
-var greet = function greeting(name) {
-    return "Hello, " + name + "!";
-};
-
-console.log(greet("Alice")); // Outputs: Hello, Alice!
-
+// Usage
+console.log(add(1)(2)(3)(4)()); // Output: 10
+console.log(add(5)(10)(15)());  // Output: 30
